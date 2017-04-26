@@ -20,6 +20,11 @@
               ]
             , 'cflags!': [ '-fno-tree-vrp' ]
           }]
+        , ['OS == "android"', {
+              'cflags': ['-std=c++0x']
+            , 'cflags!': [ '-fno-tree-vrp' ]
+            , 'ldflags!': [ '-pie', '-fPIE' ]
+          }]
         ]
       , "dependencies": [
             "<(module_root_dir)/deps/leveldb/leveldb.gyp:leveldb"

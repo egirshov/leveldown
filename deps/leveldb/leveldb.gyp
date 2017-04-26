@@ -85,6 +85,12 @@
                 '-pthread'
             ]
         }]
+      , ['OS == "android"', {
+            'defines': [
+                'OS_ANDROID=1'
+              , '_REENTRANT=1'
+            ]
+        }]
       , ['OS == "freebsd"', {
             'defines': [
                 'OS_FREEBSD=1'
